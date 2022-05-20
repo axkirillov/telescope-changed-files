@@ -2,8 +2,8 @@
 Telescope picker to browse files that changed between your branch and develop
 
 # install
-```
 -- add this to your init.lua
+```
 require('packer').startup(function(use)
 	use { "axkirillov/telescope-changed-files" }
 end)
