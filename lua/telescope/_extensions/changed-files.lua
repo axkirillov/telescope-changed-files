@@ -7,13 +7,15 @@ if not has_telescope then
   error('This plugins requires nvim-telescope/telescope.nvim')
 end
 
-local changed_files = function(opts)
+M = {}
+
+M.changed_files = function(opts)
 	local command = "git diff --name-only $(git merge-base HEAD develop)"
 	local handle = io.popen(command)
 	local result = handle:read("*a")
 	handle:close()
 
-	files = {}
+	local files = {}
 	for token in string.gmatch(result, "[^%s]+") do
 	   table.insert(files, token)
 	end
@@ -30,5 +32,7 @@ local changed_files = function(opts)
 end
 
 return telescope.register_extension {
-  exports = { changed_files = changed_files }
+	exports = {
+		changed_files = M.changed_files
+	},
 }
