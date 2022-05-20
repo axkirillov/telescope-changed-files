@@ -30,5 +30,5 @@ local changed_files = function(opts)
 end
 
 return telescope.register_extension {
-  exports = changed_files,
+  exports = { changed_files = changed_files }
 }
