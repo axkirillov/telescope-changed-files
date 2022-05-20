@@ -23,7 +23,7 @@ M.changed_files = function(opts)
 	opts = opts or {}
 
 	pickers.new(opts, {
-		prompt_title = "colors",
+		prompt_title = "changed files",
 		finder = finders.new_table {
 			results = files
 		},
