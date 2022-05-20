@@ -1,6 +1,12 @@
 # telescope-changed-files
 Telescope picker to browse files that changed between your branch and develop
 
+underneath the picker just runs this git command
+
+```
+git diff --name-only $(git merge-base HEAD develop) 
+```
+
 # install
 -- add this to your init.lua
 ```
