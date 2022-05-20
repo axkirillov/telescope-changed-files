@@ -28,5 +28,5 @@ local changed_files = function(opts)
 end
 
 return telescope.register_extension {
-  exports = hanged_files,
+  exports = changed_files,
 }
