@@ -8,7 +8,7 @@ git diff --name-only $(git merge-base HEAD develop)
 ```
 
 # install
--- add this to your init.lua
+add this to your init.lua
 ```
 require('packer').startup(function(use)
 	use { "axkirillov/telescope-changed-files" }
