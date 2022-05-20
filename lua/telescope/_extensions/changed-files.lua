@@ -1,6 +1,11 @@
+local has_telescope, telescope = pcall(require, 'telescope')
 local pickers = require "telescope.pickers"
 local finders = require "telescope.finders"
 local conf = require("telescope.config").values
+
+if not has_telescope then
+  error('This plugins requires nvim-telescope/telescope.nvim')
+end
 
 local command = "git diff --name-only $(git merge-base HEAD develop)"
 local handle = io.popen(command)
@@ -11,7 +16,7 @@ for token in string.gmatch(result, "[^%s]+") do
    table.insert(files, token)
 end
 
-local changedFiles = function(opts)
+local changed_files = function(opts)
   opts = opts or {}
   pickers.new(opts, {
     prompt_title = "colors",
@@ -23,5 +28,5 @@ local changedFiles = function(opts)
 end
 
 return telescope.register_extension {
-  exports = {changedFiles}
+  exports = {changed_files}
 }
