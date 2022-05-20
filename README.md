@@ -10,3 +10,8 @@ end)
 
 require('telescope').load_extension('changed_files')
 ```
+this adds a changed_files picker to telescope
+you can then map this to whatever key you like
+```
+map <leader>cf :Telescope changed_files <cr>
+```
