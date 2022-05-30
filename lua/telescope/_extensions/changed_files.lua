@@ -4,7 +4,7 @@ local finders = require "telescope.finders"
 local conf = require("telescope.config").values
 
 if not has_telescope then
-  error('This plugins requires nvim-telescope/telescope.nvim')
+  error('This plugin requires nvim-telescope/telescope.nvim')
 end
 
 M = {}
