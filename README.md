@@ -23,7 +23,7 @@ you can then map this to whatever key you like
 map <leader>cf :Telescope changed_files <cr>
 ```
 
-to change the base_branch run :Telescope changed_files choose_base_branch
+to change the base_branch run `:Telescope changed_files choose_base_branch`
 which will open a builtin git branches picker
 the branch will then be saved for the duration of your vim session
 
