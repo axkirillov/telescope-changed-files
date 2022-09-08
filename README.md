@@ -1,3 +1,6 @@
+## BEFORE YOU PROCEED
+# check out [easypick.nvim](https://github.com/axkirillov/easypick.nvim) the changed files functionality is included in its default config
+
 # telescope-changed-files
 Telescope picker to browse files that changed between your branch and develop.
 
